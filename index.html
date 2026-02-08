@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Dashboard</h1>
+
+        <div class="summary">
+            <p><strong>Total Spent:</strong> ${{ total }}</p>
+            <p><strong>Average Expense:</strong> ${{ average }}</p>
+        </div>
+
+        <h2>Spending by Category</h2>
+        <ul>
+            {% for item in categories %}
+                <li>{{ item.category }}: ${{ item.amount }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
